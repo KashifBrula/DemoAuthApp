@@ -11,20 +11,20 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		A9FDE08447AAEEE4AF628A9B /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
+		64FDDCD720524D25A510C767 /* Inter-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D9E45418D22547669E395B90 /* Inter-Bold.otf */; };
+		475B33AEB17F46688B38D775 /* Inter-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = F6DCC7004BAE4746916B2A1B /* Inter-Light.otf */; };
+		6FA954113D6F4C8A8E211307 /* Inter-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B594BC628F6E4DD3B643D900 /* Inter-Medium.otf */; };
+		B04B4DD2958D4AA3B96042E1 /* Inter-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 92887ACD81BC4F18B0018502 /* Inter-Regular.otf */; };
+		06B8B072C1B44D08BE036381 /* Inter-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D163B917733A489693DE3F35 /* Inter-SemiBold.otf */; };
+		7097235D30AB4AE89BBC9491 /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D81BC1A8B80410BBA63B3D2 /* Raleway-Bold.ttf */; };
+		473D6D8AB3E54FB8A9F765B1 /* Raleway-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2ECE3EB72744C70AFDC3E40 /* Raleway-Light.ttf */; };
+		B23B4209F2D6415FB68EB3F1 /* Raleway-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 091ED9CC2B8D4B7BBF0BCD90 /* Raleway-Medium.ttf */; };
+		B780B6CA5C344FE4804BFF7D /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AFF0A55BEB4496E9B0E65B1 /* Raleway-Regular.ttf */; };
+		C074BA63129E466CBA9BB26B /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 426C4D2F1DE94CB197171BF5 /* Raleway-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		00E356F41AD99517003FC87E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = DemoAuthApp;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* DemoAuthApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoAuthApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = DemoAuthApp/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = DemoAuthApp/Info.plist; sourceTree = "<group>"; };
@@ -35,6 +35,16 @@
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = DemoAuthApp/AppDelegate.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = DemoAuthApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		D9E45418D22547669E395B90 /* Inter-Bold.otf */ = {isa = PBXFileReference; name = "Inter-Bold.otf"; path = "../src/assets/fonts/Inter-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F6DCC7004BAE4746916B2A1B /* Inter-Light.otf */ = {isa = PBXFileReference; name = "Inter-Light.otf"; path = "../src/assets/fonts/Inter-Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B594BC628F6E4DD3B643D900 /* Inter-Medium.otf */ = {isa = PBXFileReference; name = "Inter-Medium.otf"; path = "../src/assets/fonts/Inter-Medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		92887ACD81BC4F18B0018502 /* Inter-Regular.otf */ = {isa = PBXFileReference; name = "Inter-Regular.otf"; path = "../src/assets/fonts/Inter-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D163B917733A489693DE3F35 /* Inter-SemiBold.otf */ = {isa = PBXFileReference; name = "Inter-SemiBold.otf"; path = "../src/assets/fonts/Inter-SemiBold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6D81BC1A8B80410BBA63B3D2 /* Raleway-Bold.ttf */ = {isa = PBXFileReference; name = "Raleway-Bold.ttf"; path = "../src/assets/fonts/Raleway-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F2ECE3EB72744C70AFDC3E40 /* Raleway-Light.ttf */ = {isa = PBXFileReference; name = "Raleway-Light.ttf"; path = "../src/assets/fonts/Raleway-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		091ED9CC2B8D4B7BBF0BCD90 /* Raleway-Medium.ttf */ = {isa = PBXFileReference; name = "Raleway-Medium.ttf"; path = "../src/assets/fonts/Raleway-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6AFF0A55BEB4496E9B0E65B1 /* Raleway-Regular.ttf */ = {isa = PBXFileReference; name = "Raleway-Regular.ttf"; path = "../src/assets/fonts/Raleway-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		426C4D2F1DE94CB197171BF5 /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; name = "Raleway-SemiBold.ttf"; path = "../src/assets/fonts/Raleway-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,14 +59,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356F01AD99517003FC87E /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				00E356F11AD99517003FC87E /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		13B07FAE1A68108700A75B9A /* DemoAuthApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +95,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				F5BB21D1C4774347B521DD87 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -115,6 +118,24 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		F5BB21D1C4774347B521DD87 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				D9E45418D22547669E395B90 /* Inter-Bold.otf */,
+				F6DCC7004BAE4746916B2A1B /* Inter-Light.otf */,
+				B594BC628F6E4DD3B643D900 /* Inter-Medium.otf */,
+				92887ACD81BC4F18B0018502 /* Inter-Regular.otf */,
+				D163B917733A489693DE3F35 /* Inter-SemiBold.otf */,
+				6D81BC1A8B80410BBA63B3D2 /* Raleway-Bold.ttf */,
+				F2ECE3EB72744C70AFDC3E40 /* Raleway-Light.ttf */,
+				091ED9CC2B8D4B7BBF0BCD90 /* Raleway-Medium.ttf */,
+				6AFF0A55BEB4496E9B0E65B1 /* Raleway-Regular.ttf */,
+				426C4D2F1DE94CB197171BF5 /* Raleway-SemiBold.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -172,19 +193,23 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		00E356EC1AD99517003FC87E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		13B07F8E1A680F5B00A75B9A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				A9FDE08447AAEEE4AF628A9B /* PrivacyInfo.xcprivacy in Resources */,
+				64FDDCD720524D25A510C767 /* Inter-Bold.otf in Resources */,
+				475B33AEB17F46688B38D775 /* Inter-Light.otf in Resources */,
+				6FA954113D6F4C8A8E211307 /* Inter-Medium.otf in Resources */,
+				B04B4DD2958D4AA3B96042E1 /* Inter-Regular.otf in Resources */,
+				06B8B072C1B44D08BE036381 /* Inter-SemiBold.otf in Resources */,
+				7097235D30AB4AE89BBC9491 /* Raleway-Bold.ttf in Resources */,
+				473D6D8AB3E54FB8A9F765B1 /* Raleway-Light.ttf in Resources */,
+				B23B4209F2D6415FB68EB3F1 /* Raleway-Medium.ttf in Resources */,
+				B780B6CA5C344FE4804BFF7D /* Raleway-Regular.ttf in Resources */,
+				C074BA63129E466CBA9BB26B /* Raleway-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,14 +300,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* DemoAuthApp */;
-			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
@@ -408,7 +425,14 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				USE_HERMES = true;
 			};
 			name = Debug;
 		};
@@ -473,7 +497,13 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
+				USE_HERMES = true;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
