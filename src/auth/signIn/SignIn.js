@@ -20,8 +20,6 @@ export const SignIn = ({navigation}) => {
   const styles = useStyles();
   const focused = useIsFocused();
 
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
   const [errMsgs, setErrMsgs] = useState({});
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
@@ -45,14 +43,10 @@ export const SignIn = ({navigation}) => {
 
     const re = /^(?!.* )/;
 
-    if (!email) {
-      handleError('Email is required.', 'emailErrMessage');
+    if (userName?.trim() === '') {
+      handleError('Username is required.', 'nameErrMsg');
       isValid = false;
     }
-    // else if (isValidEmail(email.trim()) === false) {
-    //   handleError('Pleas enter a valid email.', 'emailErrMessage');
-    //   isValid = false;
-    // }
 
     if (!password) {
       handleError('Password is required.', 'passwordErrMsg');
@@ -69,6 +63,7 @@ export const SignIn = ({navigation}) => {
     }
 
     if (isValid) {
+      navigation.replace('HomeStack');
     }
   };
 
@@ -90,8 +85,10 @@ export const SignIn = ({navigation}) => {
           autoCapitalize="none"
           placeholder={'john'}
           onChangeText={text => {
+            handleError(null, 'nameErrMsg');
             setUserName(text);
           }}
+          error={errMsgs.nameErrMsg || false}
         />
         <AppInput
           isPass={true}
@@ -111,8 +108,8 @@ export const SignIn = ({navigation}) => {
         />
         <AppButton
           title="Sign In"
+          onPress={checkValidations}
           buttonStyle={{marginTop: 30}}
-          onPress={() => {}}
         />
         <View style={styles.infoSection}>
           <Text style={styles.infoText}>Don't have an account? </Text>

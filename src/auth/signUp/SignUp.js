@@ -13,6 +13,7 @@ import {useStyles} from './styles';
 import {AppButton, AppInput} from '../../components';
 
 import colors from '../../constants/colors';
+import {isValidEmail} from '../../constants/constant';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 
 export const SignUp = ({navigation}) => {
@@ -42,6 +43,16 @@ export const SignUp = ({navigation}) => {
     let isValid = true;
 
     const re = /^(?!.* )/;
+
+    if (name?.trim() === '') {
+      handleError('Name is required.', 'nameErrMsg');
+      isValid = false;
+    }
+
+    if (userName?.trim() === '') {
+      handleError('Username is required.', 'uNameErrMsg');
+      isValid = false;
+    }
 
     if (!email) {
       handleError('Email is required.', 'emailErrMessage');
@@ -86,8 +97,10 @@ export const SignUp = ({navigation}) => {
           required={true}
           placeholder={'John'}
           onChangeText={text => {
+            handleError(null, 'nameErrMsg');
             setName(text);
           }}
+          error={errMsgs.nameErrMsg || false}
         />
         <AppInput
           required={true}
@@ -96,8 +109,10 @@ export const SignUp = ({navigation}) => {
           autoCapitalize="none"
           placeholder={'john'}
           onChangeText={text => {
+            handleError(null, 'uNameErrMsg');
             setUserName(text);
           }}
+          error={errMsgs.uNameErrMsg || false}
         />
         <AppInput
           value={email}
@@ -130,8 +145,8 @@ export const SignUp = ({navigation}) => {
 
         <AppButton
           title="Sign Up"
+          onPress={checkValidations}
           buttonStyle={{marginTop: 30}}
-          onPress={() => {}}
         />
         <View style={styles.infoSection}>
           <Text style={styles.infoText}>Already have an account? </Text>

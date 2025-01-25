@@ -5,6 +5,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import {OnBoard, SignUp, SignIn} from '../auth';
+import {HomeStack} from './homeStack/HomeStack';
 
 const StackApp = createNativeStackNavigator();
 
@@ -33,6 +34,11 @@ const App = () => {
           <StackApp.Screen
             name="SignIn"
             component={SignIn}
+            options={navOptionHandler}
+          />
+          <StackApp.Screen
+            name="HomeStack"
+            component={HomeStack}
             options={navOptionHandler}
           />
         </StackApp.Navigator>
