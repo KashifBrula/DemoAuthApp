@@ -3,7 +3,13 @@ import {Text, TouchableOpacity, View} from 'react-native';
 
 import {styles} from './styles';
 
+import {useDispatch, useSelector} from 'react-redux';
+
 export const HomeScreen = ({navigation}) => {
+  const dispatch = useDispatch();
+
+  const counter = useSelector(state => state?.counterReducer?.counter);
+
   return (
     <View style={styles.container}>
       <Text style={styles.heading}>User Info</Text>
@@ -12,7 +18,7 @@ export const HomeScreen = ({navigation}) => {
       <Text style={styles.infoText}>Email: kashif@mail.com</Text>
       <TouchableOpacity
         style={styles.logOut}
-        onPress={() => navigation.replace('SignIn')}>
+        onPress={() => navigation.navigate('StoreCleaner')}>
         <Text style={styles.logTxt}>Logout</Text>
       </TouchableOpacity>
     </View>

@@ -4,8 +4,9 @@ import {View} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-import {OnBoard, SignUp, SignIn} from '../auth';
+import {OnBoard} from '../auth';
 import {HomeStack} from './homeStack/HomeStack';
+import {AuthStack} from './authStack/AuthStack';
 
 const StackApp = createNativeStackNavigator();
 
@@ -27,13 +28,8 @@ const App = () => {
             options={navOptionHandler}
           />
           <StackApp.Screen
-            name="SignUp"
-            component={SignUp}
-            options={navOptionHandler}
-          />
-          <StackApp.Screen
-            name="SignIn"
-            component={SignIn}
+            name="AuthStack"
+            component={AuthStack}
             options={navOptionHandler}
           />
           <StackApp.Screen

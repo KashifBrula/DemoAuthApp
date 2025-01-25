@@ -4,6 +4,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 const StackApp = createNativeStackNavigator();
 
 import {HomeScreen} from '../../screens/home';
+import {StoreCleaner} from '../../redux/storeCleaner';
 
 const navOptionHandler = () => ({
   headerShown: false,
@@ -16,6 +17,11 @@ export const HomeStack = () => {
       <StackApp.Screen
         name="HomeScreen"
         component={HomeScreen}
+        options={navOptionHandler}
+      />
+      <StackApp.Screen
+        name="StoreCleaner"
+        component={StoreCleaner}
         options={navOptionHandler}
       />
     </StackApp.Navigator>

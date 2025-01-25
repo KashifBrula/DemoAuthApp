@@ -70,7 +70,7 @@ export const OnBoard = () => {
       <Text style={styles.subTitle}>Discover new daily</Text>
       <TouchableOpacity
         style={styles.button}
-        onPress={() => navigation?.navigate('SignIn')}>
+        onPress={() => navigation?.navigate('AuthStack')}>
         <Text style={styles.skipTxt}>Skip</Text>
       </TouchableOpacity>
     </View>
