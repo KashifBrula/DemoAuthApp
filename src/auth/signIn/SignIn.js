@@ -3,6 +3,7 @@ import {
   Text,
   View,
   Image,
+  Alert,
   Platform,
   Keyboard,
   StatusBar,
@@ -16,9 +17,13 @@ import colors from '../../constants/colors';
 import {useIsFocused} from '@react-navigation/native';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 
+import {useDispatch} from 'react-redux';
+import {loginUser} from '../../redux/authSlice/authSlice';
+
 export const SignIn = ({navigation}) => {
   const styles = useStyles();
   const focused = useIsFocused();
+  const dispatch = useDispatch();
 
   const [errMsgs, setErrMsgs] = useState({});
   const [userName, setUserName] = useState('');
@@ -63,7 +68,17 @@ export const SignIn = ({navigation}) => {
     }
 
     if (isValid) {
-      navigation.replace('HomeStack');
+      signInUser();
+    }
+  };
+
+  const signInUser = async () => {
+    const res = await dispatch(loginUser(userName, password));
+
+    if (res.error) {
+      Alert.alert('Login Failed', res.error);
+    } else {
+      navigation.navigate('HomeStack');
     }
   };
 

@@ -3,16 +3,13 @@ import {configureStore, combineReducers} from '@reduxjs/toolkit';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 // Auth reducers
-// import loginReducer from './authSlice/loginSlice';
-// import registerReducer from './authSlice/registerSlice';
-
+import authReducer from './authSlice/authSlice';
 // Counter reducer
 import counterReducer from './counterSlice/counterSlice';
 
 const reducers = combineReducers({
   // auth
-  // loginReducer,
-  // registerReducer,
+  authReducer,
 
   // counter
   counterReducer,

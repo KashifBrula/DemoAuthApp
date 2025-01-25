@@ -8,14 +8,14 @@ import {useDispatch, useSelector} from 'react-redux';
 export const HomeScreen = ({navigation}) => {
   const dispatch = useDispatch();
 
-  const counter = useSelector(state => state?.counterReducer?.counter);
+  const {user} = useSelector(state => state.authReducer);
 
   return (
     <View style={styles.container}>
       <Text style={styles.heading}>User Info</Text>
-      <Text style={styles.infoText}>User Name:kashif </Text>
-      <Text style={styles.infoText}>Name: Muhammad Kashif</Text>
-      <Text style={styles.infoText}>Email: kashif@mail.com</Text>
+      <Text style={styles.infoText}>Username:{user?.username} </Text>
+      <Text style={styles.infoText}>Name: {user?.name}</Text>
+      <Text style={styles.infoText}>Email: {user?.email}</Text>
       <TouchableOpacity
         style={styles.logOut}
         onPress={() => navigation.navigate('StoreCleaner')}>

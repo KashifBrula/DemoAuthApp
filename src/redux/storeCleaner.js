@@ -3,8 +3,7 @@ import {useDispatch} from 'react-redux';
 
 import {clearLocal} from '../boot/rootNavigation';
 
-// auth
-import {reset} from './authSlice/loginSlice';
+import {logout} from './authSlice/authSlice';
 import {clearCounter} from './counterSlice/counterSlice';
 
 export const StoreCleaner = ({navigation}) => {
@@ -21,6 +20,7 @@ export const StoreCleaner = ({navigation}) => {
   }, []);
 
   const reduxClear = async () => {
+    dispatch(logout());
     dispatch(clearCounter());
   };
 

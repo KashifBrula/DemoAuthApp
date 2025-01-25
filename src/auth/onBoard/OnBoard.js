@@ -4,6 +4,7 @@ import {View, Text, Image, FlatList, TouchableOpacity} from 'react-native';
 import {useStyles} from './styles';
 import colors from '../../constants/colors';
 
+import {useSelector} from 'react-redux';
 import {useNavigation} from '@react-navigation/native';
 
 const DATA = [1, 2, 3, 4, 5];
@@ -14,6 +15,8 @@ export const OnBoard = () => {
   const navigation = useNavigation();
 
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const {user} = useSelector(state => state.authReducer);
 
   const onViewableItemsChanged = useCallback(({viewableItems}) => {
     setCurrentIndex(viewableItems[0]?.index || 0);
@@ -70,8 +73,12 @@ export const OnBoard = () => {
       <Text style={styles.subTitle}>Discover new daily</Text>
       <TouchableOpacity
         style={styles.button}
-        onPress={() => navigation?.navigate('AuthStack')}>
-        <Text style={styles.skipTxt}>Skip</Text>
+        onPress={() =>
+          user?.username
+            ? navigation?.navigate('HomeStack')
+            : navigation?.navigate('AuthStack')
+        }>
+        <Text style={styles.skipTxt}>Next</Text>
       </TouchableOpacity>
     </View>
   );

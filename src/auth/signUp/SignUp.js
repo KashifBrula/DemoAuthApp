@@ -3,6 +3,7 @@ import {
   Text,
   View,
   Image,
+  Alert,
   Keyboard,
   Platform,
   StatusBar,
@@ -16,8 +17,12 @@ import colors from '../../constants/colors';
 import {isValidEmail} from '../../constants/constant';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 
+import {useSelector, useDispatch} from 'react-redux';
+import {registerUser} from '../../redux/authSlice/authSlice';
+
 export const SignUp = ({navigation}) => {
   const styles = useStyles();
+  const dispatch = useDispatch();
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -29,6 +34,8 @@ export const SignUp = ({navigation}) => {
   const handleError = (error, input) => {
     setErrMsgs(errMsgs => ({...errMsgs, [input]: error}));
   };
+
+  const {error} = useSelector(state => state.authReducer);
 
   useEffect(() => {
     Platform.OS == 'android' && StatusBar.setBackgroundColor(colors.theme);
@@ -77,6 +84,24 @@ export const SignUp = ({navigation}) => {
     }
 
     if (isValid) {
+      handleSignUp();
+    }
+  };
+
+  const handleSignUp = async () => {
+    const body = {
+      name: name.trim(),
+      email: email.trim(),
+      username: userName.trim(),
+      password: password.trim(),
+    };
+
+    const res = await dispatch(registerUser(body));
+
+    if (res.error) {
+      Alert.alert('Registration Failed', res.error);
+    } else {
+      navigation.navigate('HomeStack');
     }
   };
 
